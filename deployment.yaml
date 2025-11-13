@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: api-container
-        image: rogerdornas/playlist-api:v1.2
+        image: rogerdornas/playlist-api:v1.3
         ports:
         - containerPort: 5000
         volumeMounts:
