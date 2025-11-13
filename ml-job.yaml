@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: ml-generator-job
+  name: ml-generator-job-ds1
   namespace: rogeroliveira
 spec:
   template:
@@ -12,7 +12,7 @@ spec:
       - name: ml-container
         image: rogerdornas/playlist-ml:v1.0
         command: ["/bin/sh", "-c"]
-        args: ["python generator.py && cp model.pkl /shared/model.pkl && echo 'Modelo salvo no volume!'"]
+        args: ["python generator.py && cp model.pkl /shared/model.pkl && echo 'Modelo salvo!'"]
         volumeMounts:
         - name: shared-storage
           mountPath: /shared
