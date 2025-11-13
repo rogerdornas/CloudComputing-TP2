@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+  namespace: rogeroliveira
+  labels:
+    app: rogeroliveira-playlist-recommender
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rogeroliveira-playlist-recommender
+  template:
+    metadata:
+      labels:
+        app: rogeroliveira-playlist-recommender
+    spec:
+      containers:
+      - name: api-container
+        image: rogerdornas/playlist-api:v1.0
+        ports:
+        - containerPort: 5000
+        volumeMounts:
+        - name: shared-storage
+          mountPath: /shared
+        # Tenta pegar o modelo do volume compartilhado antes de iniciar
+        command: ["/bin/sh", "-c"]
+        args: ["cp /shared/model.pkl . || echo 'Aviso: Modelo ainda não existe' && flask run --host=0.0.0.0 --port=5000"]
+      volumes:
+      - name: shared-storage
+        persistentVolumeClaim:
+          claimName: model-pvc

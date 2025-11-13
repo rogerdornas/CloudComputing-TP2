@@ -1,0 +1,22 @@
+# Usa a mesma imagem base
+FROM python:3.9-slim
+
+# Define a pasta de trabalho
+WORKDIR /app
+
+# Instala dependências
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia o código da API
+COPY app.py .
+
+# Define a variável de ambiente para o Flask
+ENV FLASK_APP=app.py
+
+# Expõe a porta 5000 (porta padrão interna do Flask)
+EXPOSE 5000
+
+# Comando para iniciar o servidor
+# IMPORTANTE: --host=0.0.0.0 é obrigatório para funcionar no Docker/Kubernetes
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
