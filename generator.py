@@ -3,7 +3,6 @@ from fpgrowth_py import fpgrowth
 import pickle
 import os
 
-# --- CAMINHOS ---
 DATASET_FILE = '/home/datasets/spotify/2023_spotify_ds1.csv' 
 MODEL_FILE = 'model.pkl'
 
@@ -13,7 +12,7 @@ MIN_CONF = 0.5
 N_ROWS_TO_READ = 15000 
 
 def main():
-    print(f"--- Iniciando Gerador de Regras (Modo Econômico) ---")
+    print(f"--- Iniciando Gerador de Regras ---")
     
     if not os.path.exists(DATASET_FILE):
         print(f"ERRO: Arquivo '{DATASET_FILE}' não encontrado.")
@@ -22,8 +21,6 @@ def main():
     print(f"Lendo apenas as primeiras {N_ROWS_TO_READ} linhas de: {DATASET_FILE}")
     
     try:
-        # Otimização: use 'nrows' para ler APENAS o necessário do disco
-        # Otimização: 'usecols' carrega só o que importa, economizando RAM
         df = pd.read_csv(DATASET_FILE, nrows=N_ROWS_TO_READ)
         
         # Limpeza básica: remove nomes de músicas vazios

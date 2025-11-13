@@ -5,9 +5,8 @@ import datetime
 
 app = Flask(__name__)
 
-# Configurações
 MODEL_FILE = 'model.pkl'
-CODE_VERSION = "v1.0" # Vamos mudar isso depois via CI/CD
+CODE_VERSION = "v1.0"
 
 # Variável global para armazenar as regras
 model_rules = []
@@ -73,4 +72,3 @@ def recommend():
     
     return jsonify(response)
 
-# Nota: O Flask será rodado via linha de comando, não precisa do app.run() aqui
