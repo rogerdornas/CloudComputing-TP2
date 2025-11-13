@@ -6,7 +6,7 @@ import datetime
 app = Flask(__name__)
 
 MODEL_FILE = 'model.pkl'
-CODE_VERSION = "v1.1"
+CODE_VERSION = "v1.2"
 
 # Variável global para armazenar as regras
 model_rules = []
