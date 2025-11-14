@@ -1,0 +1,307 @@
+metadata:
+  creationTimestamp: "2025-11-13T21:04:37Z"
+  generation: 392
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:destination:
+          .: {}
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:source:
+          .: {}
+          f:path: {}
+          f:repoURL: {}
+        f:syncPolicy:
+          .: {}
+          f:automated: {}
+      f:status:
+        .: {}
+        f:health: {}
+        f:sourceHydrator: {}
+        f:summary: {}
+        f:sync:
+          .: {}
+          f:comparedTo:
+            .: {}
+            f:destination: {}
+            f:source: {}
+    manager: argocd-server
+    operation: Update
+    time: "2025-11-13T21:30:13Z"
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:controllerNamespace: {}
+        f:health:
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:history: {}
+        f:operationState:
+          .: {}
+          f:finishedAt: {}
+          f:message: {}
+          f:operation:
+            .: {}
+            f:initiatedBy:
+              .: {}
+              f:automated: {}
+            f:retry:
+              .: {}
+              f:limit: {}
+            f:sync:
+              .: {}
+              f:revision: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            .: {}
+            f:resources: {}
+            f:revision: {}
+            f:source:
+              .: {}
+              f:path: {}
+              f:repoURL: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceType: {}
+        f:summary:
+          f:images: {}
+        f:sync:
+          f:comparedTo:
+            f:destination:
+              f:namespace: {}
+              f:server: {}
+            f:source:
+              f:path: {}
+              f:repoURL: {}
+          f:revision: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: "2025-11-14T02:05:50Z"
+  name: rogeroliveira-playlist-recommender
+  namespace: argocd
+  resourceVersion: "18532365"
+  uid: 435bb9f8-4e95-4933-943b-5537f6afc350
+spec:
+  destination:
+    namespace: rogeroliveira
+    server: https://kubernetes.default.svc
+  project: rogeroliveira-project
+  source:
+    path: .
+    repoURL: https://github.com/rogerdornas/CloudComputing-TP2.git
+  syncPolicy:
+    automated: {}
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: "2025-11-13T22:47:15Z"
+    status: Healthy
+  history:
+  - deployStartedAt: "2025-11-13T21:04:37Z"
+    deployedAt: "2025-11-13T21:04:38Z"
+    id: 0
+    initiatedBy:
+      automated: true
+    revision: 2b6d91364be49b74df6241bf1d26a21ebd048a19
+    source:
+      path: .
+      repoURL: https://github.com/rogerdornas/CloudComputing-TP2.git
+  - deployStartedAt: "2025-11-13T21:29:02Z"
+    deployedAt: "2025-11-13T21:29:03Z"
+    id: 1
+    initiatedBy:
+      automated: true
+    revision: 8e39045fc36b02ab6d60e4318e7b9b0f48f2f8ff
+    source:
+      path: .
+      repoURL: https://github.com/rogerdornas/CloudComputing-TP2.git
+  - deployStartedAt: "2025-11-13T21:41:17Z"
+    deployedAt: "2025-11-13T21:41:17Z"
+    id: 2
+    initiatedBy:
+      automated: true
+    revision: 7e475d1ecc00d76715307790a9bd44b338a27eff
+    source:
+      path: .
+      repoURL: https://github.com/rogerdornas/CloudComputing-TP2.git
+  - deployStartedAt: "2025-11-13T21:48:12Z"
+    deployedAt: "2025-11-13T21:48:13Z"
+    id: 3
+    initiatedBy:
+      automated: true
+    revision: 018da1f442113e624c614a4ba16599b9a0dd2997
+    source:
+      path: .
+      repoURL: https://github.com/rogerdornas/CloudComputing-TP2.git
+  - deployStartedAt: "2025-11-13T22:03:33Z"
+    deployedAt: "2025-11-13T22:03:34Z"
+    id: 4
+    initiatedBy:
+      automated: true
+    revision: a280393239996d7ee1a14ae2af68b483b60aa70e
+    source:
+      path: .
+      repoURL: https://github.com/rogerdornas/CloudComputing-TP2.git
+  - deployStartedAt: "2025-11-13T22:11:04Z"
+    deployedAt: "2025-11-13T22:11:05Z"
+    id: 5
+    initiatedBy:
+      automated: true
+    revision: ed722366421bf9f7b911bcdb4464fa3cc1bba6d1
+    source:
+      path: .
+      repoURL: https://github.com/rogerdornas/CloudComputing-TP2.git
+  - deployStartedAt: "2025-11-13T22:26:09Z"
+    deployedAt: "2025-11-13T22:26:09Z"
+    id: 6
+    initiatedBy:
+      automated: true
+    revision: fc5a88e2a493a20f46053cb2dc233ae0a1cb9aab
+    source:
+      path: .
+      repoURL: https://github.com/rogerdornas/CloudComputing-TP2.git
+  - deployStartedAt: "2025-11-13T22:40:32Z"
+    deployedAt: "2025-11-13T22:40:33Z"
+    id: 7
+    initiatedBy:
+      automated: true
+    revision: d6eea9c314a9b2f296a0cf9119193ee577591816
+    source:
+      path: .
+      repoURL: https://github.com/rogerdornas/CloudComputing-TP2.git
+  operationState:
+    finishedAt: "2025-11-13T22:40:33Z"
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        revision: d6eea9c314a9b2f296a0cf9119193ee577591816
+    phase: Succeeded
+    startedAt: "2025-11-13T22:40:32Z"
+    syncResult:
+      resources:
+      - group: batch
+        hookPhase: Succeeded
+        images:
+        - rogerdornas/playlist-ml:v1.0
+        kind: Job
+        message: ignored (requires pruning)
+        name: ml-generator-job-ds1
+        namespace: rogeroliveira
+        status: PruneSkipped
+        syncPhase: Sync
+        version: v1
+      - group: ""
+        hookPhase: Running
+        kind: PersistentVolumeClaim
+        message: persistentvolumeclaim/model-pvc unchanged
+        name: model-pvc
+        namespace: rogeroliveira
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ""
+        hookPhase: Running
+        kind: Service
+        message: service/api-service unchanged
+        name: api-service
+        namespace: rogeroliveira
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - rogerdornas/playlist-api:v1.3
+        kind: Deployment
+        message: deployment.apps/api-deployment configured
+        name: api-deployment
+        namespace: rogeroliveira
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: batch
+        hookPhase: Running
+        images:
+        - rogerdornas/playlist-ml:v1.0
+        kind: Job
+        message: job.batch/ml-generator-job-ds2 unchanged
+        name: ml-generator-job-ds2
+        namespace: rogeroliveira
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      revision: d6eea9c314a9b2f296a0cf9119193ee577591816
+      source:
+        path: .
+        repoURL: https://github.com/rogerdornas/CloudComputing-TP2.git
+  reconciledAt: "2025-11-14T02:05:50Z"
+  resourceHealthSource: appTree
+  resources:
+  - health:
+      status: Healthy
+    kind: PersistentVolumeClaim
+    name: model-pvc
+    namespace: rogeroliveira
+    status: Synced
+    version: v1
+  - health:
+      status: Healthy
+    kind: Service
+    name: api-service
+    namespace: rogeroliveira
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: api-deployment
+    namespace: rogeroliveira
+    status: Synced
+    version: v1
+  - group: batch
+    health:
+      status: Healthy
+    kind: Job
+    name: ml-generator-job-ds1
+    namespace: rogeroliveira
+    status: Synced
+    version: v1
+  - group: batch
+    health:
+      status: Healthy
+    kind: Job
+    name: ml-generator-job-ds2
+    namespace: rogeroliveira
+    requiresPruning: true
+    status: OutOfSync
+    version: v1
+  sourceHydrator: {}
+  sourceType: Directory
+  summary:
+    images:
+    - rogerdornas/playlist-api:v1.3
+    - rogerdornas/playlist-ml:v1.0
+  sync:
+    comparedTo:
+      destination:
+        namespace: rogeroliveira
+        server: https://kubernetes.default.svc
+      source:
+        path: .
+        repoURL: https://github.com/rogerdornas/CloudComputing-TP2.git
+    revision: e9430754fa2df7a0c48751b8d27c4247232d21cc
+    status: OutOfSync
